@@ -1,2 +1,5 @@
-nfldraft.theringer.com
+https://nfldraft.theringer.com
 https://www.westpac.com.au/brokers/home/
+http://www.thepredictiontracker.com/nflresults.php?type=3&orderby=wpct%20desc&year=18
+http://www.thepredictiontracker.com/nflpredictions.csv
+https://www.commbroker.com.au/Net/Documentum/latest-news/service-updates.aspx
