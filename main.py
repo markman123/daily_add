@@ -10,10 +10,10 @@ def run(event, context):
     data = open("watch.txt","r").readlines()
     for itm in data:
         url = f"https://web.archive.org/save/{itm.strip()}"
-        r = requests.post(url, data={"url": url, "capture_all": "on"})
-        job_id = re.findall("var JOB_ID = \"(.+)\"", r.text) 
-        if len(job_id) > 0:
-            print(f"https://web/archive.org/save/status/{job_id[0]}")
+        r = requests.get(url)
+        if "content-location" in r.headers.keys():
+            print(f"https://web.archive.org{r.headers['content-location']}")
+        
         
 
 if __name__ == '__main__':
