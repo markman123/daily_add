@@ -13,7 +13,8 @@ def run(event, context):
         r = requests.get(url)
         if "content-location" in r.headers.keys():
             print(f"https://web.archive.org{r.headers['content-location']}")
-        
+        elif "x-cache-key" in r.headers.keys():
+            print(f"{r.headers['x-cache-key'].replace('httpsweb','https://web')}")
         
 
 if __name__ == '__main__':
